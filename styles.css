@@ -1,0 +1,242 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #e0e0e0;
+}
+
+#outro {
+    font-size: small;
+}
+
+h1 {
+    text-align: center;
+}
+.top {
+    transition: 1s;
+    height: 100%;
+    box-shadow: 0px 10px 20px -10px;
+    background-color: #f3f3f3;
+}
+.top:hover {
+    height: 110%;
+    box-shadow: 0px 15px 20px -10px;
+    background-color: #f9f9f9;
+}
+
+.subtitle {
+    align-items: center;
+    text-align: center;
+}
+
+.section {
+    margin-bottom: 40px;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    animation: 2s grow;
+}
+
+@keyframes grow {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.section h2 {
+    margin-top: 0;
+}
+
+.house {
+    margin-bottom: 30px;
+}
+
+.house h3 {
+    margin-top: 0;
+}
+
+
+.room {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.beds {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    box-shadow: 1pt 1pt 5pt -3px gray;
+    transition: 1s;
+}
+.beds:hover {
+    box-shadow: 5pt 5pt 5pt -3px gray;
+    background-color: #fcfcfc;
+}
+
+.bed-carpet {
+    display: flex;
+    flex-direction: row;
+    background-color: #d2b48c;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 5px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+}
+
+.bed-name {
+    word-break: break-word;
+    max-width: 100%;
+    font-size: 14px;
+}
+
+.bed-type {
+    font-style: italic;
+    font-size: 12px;
+    color: #666;
+    margin-top: 5px;
+}
+
+.bed {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    padding: 10px;
+    text-align: center;
+    border: 2px solid #8b4513;
+    border-radius: 10px;
+    background-color: #f0e68c;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    aspect-ratio: 4 / 9; /* This sets the base aspect ratio */
+    max-width: calc(0.7 * 180px); /* 0.7 times the base height */
+}
+
+.bed.single {
+    width: 80px;
+    height: 180px;
+    min-width: 60px;
+}
+
+.bed.double {
+    width: 160px;
+    height: 180px;
+    min-width: 120px;
+    max-width: calc(0.7 * 180px); /* 0.7 times the height */
+}
+
+.bed-carpet {
+    display: flex;
+    flex-direction: row;
+    background-color: #d2b48c;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 5px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    max-width: calc(2 * 0.7 * 180px + 20px); /* 2 times max bed width plus padding */
+}
+
+/* Media queries for responsive design */
+@media screen and (max-width: 768px) {
+    .bed {
+        aspect-ratio: 7 / 16; /* Slightly wider aspect ratio for smaller screens */
+    }
+
+    .bed.single {
+        width: 70px;
+        height: 160px;
+        min-width: 50px;
+        max-width: calc(0.7 * 160px);
+    }
+
+    .bed.double {
+        width: 140px;
+        height: 160px;
+        min-width: 100px;
+        max-width: calc(0.7 * 160px);
+    }
+
+    .bed-carpet {
+        max-width: calc(2 * 0.7 * 160px + 20px);
+    }
+
+    .bed-name {
+        font-size: 12px;
+    }
+
+    .bed-type {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .bed {
+        aspect-ratio: 3 / 7; /* Even slightly wider aspect ratio for very small screens */
+    }
+
+    .bed.single {
+        width: 60px;
+        height: 140px;
+        min-width: 40px;
+        max-width: calc(0.7 * 140px);
+    }
+
+    .bed.double {
+        width: 120px;
+        height: 140px;
+        min-width: 80px;
+        max-width: calc(0.7 * 140px);
+    }
+
+    .bed-carpet {
+        max-width: calc(2 * 0.7 * 140px + 20px);
+    }
+
+    .bed-name {
+        font-size: 10px;
+    }
+
+    .bed-type {
+        font-size: 8px;
+    }
+}
+
+.couple-heart {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    color: #ff69b4;
+    transition: all 0.3s ease;
+}
+
+.couple-heart:hover {
+    transform: translateX(-50%) scale(1.2);
+}
+
+
+.owl-carousel .owl-nav button.owl-prev,
+.owl-carousel .owl-nav button.owl-next {
+    font-size: 24px;
+    margin: 0 10px;
+}

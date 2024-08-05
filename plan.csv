@@ -1,0 +1,47 @@
+Nom,Section,Lieu,Chambre,Lit,Cat
+David V.,M. Basse,Yvonne,1,Double lits-simples,Couple
+Nath V.,M. Basse,Yvonne,1,Double lits-simples,Couple
+Dany D.,M. Basse,Yvonne,2,Double lits-simples,Adulte
+-,M. Basse,Yvonne,2,Double lits-simples,Adulte
+Dieche,M. Basse,Yvonne,Salon,Canapé-lit,Adulte
+-,M. Basse,Yvonne,Salon,Canapé-lit,Adulte
+Tatie,M. Basse,Papé,1,Lit double,Adulte
+-,M. Basse,Papé,1,Lit double,Adulte
+Régis,M. Basse,Papé,2,Lit double,Couple
+Valérie,M. Basse,Papé,2,Lit double,Couple
+Flo,M. Basse,Papé,Salon,Canapé-lit,Enfant
+-,M. Basse,Papé,Salon,Canapé-lit,Enfant
+Sandrine,M. Basse,Ermite,1,Lit double,Couple
+Olivier,M. Basse,Ermite,1,Lit double,Couple
+Vanille,M. Basse,Ermite,1,Double lits-simples,Enfant
+-,M. Basse,Ermite,1,Double lits-simples,Enfant
+Severine,M. Basse,Ermite,2,Double lits-simples,Couple
+Olivier,M. Basse,Ermite,2,Double lits-simples,Couple
+Isa,M. Basse,Ermite,Salon,Lit double,Couple
+David,M. Basse,Ermite,Salon,Lit double,Couple
+David,M. Basse,Pigeonnier,2,Lit double,Couple
+Christelle,M. Basse,Pigeonnier,2,Lit double,Couple
+Ophélie,M. Basse,Pigeonnier,1,Lit simple,Enfant
+Jéje,M. Basse,Pigeonnier,1,Lit simple,Enfant
+Jean-N,M. Haute,Fournil,1,Lit double,Couple
+Marie-Annick,M. Haute,Fournil,1,Lit double,Couple
+Chamels,M. Haute,Anna,1,Lit double,Couple
+Fathia,M. Haute,Anna,1,Lit double,Couple
+Aksel,M. Haute,Anna,1,Canapé-lit,Enfant
+-,M. Haute,Anna,1,Canapé-lit,Enfant
+Eric,M. Haute,Anna,2,Double lits-simples,Couple
+Pascale,M. Haute,Anna,2,Double lits-simples,Couple
+Jérôme,M. Haute,Anna,3,Lit double,Couple
+Fabienne,M. Haute,Anna,3,Lit double,Couple
+Sophon,M. Haute,Talmenier,1,Lit double,Couple
+Véro,M. Haute,Talmenier,1,Lit double,Couple
+Vincent,M. Haute,Talmenier,2,Double lits-simples,Couple
+Céline,M. Haute,Talmenier,2,Double lits-simples,Couple
+Lili S.,Camping,Camping,1,Lit double,Enfant
+Zoé,Camping,Camping,1,Lit double,Enfant
+Lily B.,Camping,Camping,2,Lit simple,Enfant
+Floriane,Camping,Camping,2,Lit simple,Enfant
+Charlie,Camping,Camping,3,Lit simple,Enfant
+Clara,Camping,Camping,3,Lit simple,Enfant
+Maël,Camping,Camping,Salon,Lit double,Enfant
+-,Camping,Camping,Salon,Lit double,Enfant
