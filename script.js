@@ -8,6 +8,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+function githubPage() {
+    window.location.href = "github.com/NathParty/Nathparty.github.io"
+}
+
 function processData(data) {
     const sections = {
         "M. Basse": {},
@@ -61,11 +65,11 @@ function renderSections(sections) {
     for (const [sectionName, houses] of Object.entries(sections)) {
         const sectionElement = document.createElement('div');
         sectionElement.className = 'section';
-		if (/^M\./.test(sectionName)) {
-			sectionElement.innerHTML = `<h2>Partie "<i>M&eacute;tairie${sectionName.slice(2)}</i>"</h2>`;
-		} else {
-			sectionElement.innerHTML = `<h2>Partie "<i>${sectionName}</i>"</h2>`;
-		}
+        if (/^M\./.test(sectionName)) {
+            sectionElement.innerHTML = `<h2>Partie "<i>M&eacute;tairie${sectionName.slice(2)}</i>"</h2>`;
+        } else {
+            sectionElement.innerHTML = `<h2>Partie "<i>${sectionName}</i>"</h2>`;
+        }
 
         for (const [houseName, rooms] of Object.entries(houses)) {
             const houseElement = document.createElement('div');

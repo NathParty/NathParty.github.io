@@ -24,6 +24,14 @@ h1 {
     background-color: #f9f9f9;
 }
 
+button {
+	transition: 0.5s
+}
+button:hover {
+    box-shadow: 0pt 0pt 3pt;
+	height: 110%;
+}
+
 .subtitle {
     align-items: center;
     text-align: center;
@@ -80,6 +88,17 @@ h1 {
 .beds:hover {
     box-shadow: 5pt 5pt 5pt -3px gray;
     background-color: #fcfcfc;
+}
+
+.bed-nocarpet {
+    display: flex;
+    flex-direction: row;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 5px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
 }
 
 .bed-carpet {
