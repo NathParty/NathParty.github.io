@@ -61,7 +61,11 @@ function renderSections(sections) {
     for (const [sectionName, houses] of Object.entries(sections)) {
         const sectionElement = document.createElement('div');
         sectionElement.className = 'section';
-        sectionElement.innerHTML = `<h2>Partie ${sectionName}</h2>`;
+		if (/^M\./.test(sectionName)) {
+			sectionElement.innerHTML = `<h2>Partie "<i>M&eacute;tairie${sectionName.slice(2)}</i>"</h2>`;
+		} else {
+			sectionElement.innerHTML = `<h2>Partie "<i>${sectionName}</i>"</h2>`;
+		}
 
         for (const [houseName, rooms] of Object.entries(houses)) {
             const houseElement = document.createElement('div');
@@ -116,7 +120,12 @@ function renderSections(sections) {
 
                         bedsElement.appendChild(carpetElement);
                     } else if (guest.Lit === "Lit double" || guest.Lit === "Canapé-lit") {
+                        const carpetElement = document.createElement('div');
+                        carpetElement.className = 'bed-nocarpet';
+
                         const bedElement = createBedElement(guest, 'double');
+                        carpetElement.appendChild(bedElement);
+
 
                         if (nextGuest && nextGuest.Lit === guest.Lit) {
                             if (guest.Nom !== "-" && nextGuest.Nom !== "-") {
@@ -138,10 +147,15 @@ function renderSections(sections) {
                             index++; // Skip the next guest as we've already included them
                         }
 
-                        bedsElement.appendChild(bedElement);
+                        bedsElement.appendChild(carpetElement);
                     } else {
-                        const bedElement = createBedElement(guest);
-                        bedsElement.appendChild(bedElement);
+                        const carpetElement = document.createElement('div');
+                        carpetElement.className = 'bed-nocarpet';
+
+                        const bedElement = createBedElement(guest, 'double');
+                        carpetElement.appendChild(bedElement);
+
+                        bedsElement.appendChild(carpetElement);
                     }
 
                     index++;
