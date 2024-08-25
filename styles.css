@@ -74,6 +74,7 @@ button:hover {
     border-radius: 4px;
     padding: 10px;
     margin-bottom: 10px;
+	object-fit: scale-down;
 }
 
 .beds {
@@ -83,6 +84,8 @@ button:hover {
     justify-content: flex-start;
     align-items: flex-start;
     box-shadow: 1pt 1pt 5pt -3px gray;
+	object-fit: cover;
+	overflow-x: scroll;
     transition: 1s;
 }
 .beds:hover {
@@ -111,6 +114,7 @@ button:hover {
     flex-grow: 1;
     flex-shrink: 1;
     flex-basis: auto;
+	object-fit: cover;
 }
 
 .bed-name {
@@ -171,7 +175,8 @@ button:hover {
     flex-grow: 1;
     flex-shrink: 1;
     flex-basis: auto;
-    max-width: calc(2 * 0.7 * 180px + 20px); /* 2 times max bed width plus padding */
+    /*max-width: calc(2 * 0.7 * 180px + 20px); /* 2 times max bed width plus padding */
+	max-width: fit-content;
 }
 
 /* Media queries for responsive design */
