@@ -73,6 +73,9 @@ function renderSections(sections) {
 
         for (const [houseName, rooms] of Object.entries(houses)) {
             const houseElement = document.createElement('div');
+
+			const nbRooms = Object.keys(rooms).length
+
             houseElement.className = 'house';
             if (houseName == "Camping") {
                 houseElement.innerHTML = `<h3>R&eacute;partition en bungalows</h3>`;
@@ -81,12 +84,25 @@ function renderSections(sections) {
             }
 
             const carousel = document.createElement('div');
-            carousel.className = 'owl-carousel';
+			carousel.style.display = "flex";
+
+			if (nbRooms > 2) {
+				carousel.className = 'owl-carousel';
+			} else {
+				carousel.className = 'non-owl';
+				carousel.style.marginLeft = "10px";
+				carousel.style.marginRight = "10px";
+			}
             carousel.id = houseName;
 
             for (const [roomNumber, guests] of Object.entries(rooms)) {
                 const roomElement = document.createElement('div');
                 roomElement.className = 'room';
+
+				if (nbRooms < 3) {
+					roomElement.style.margin = "10px";
+				}
+
                 if (/^\d$/.test(roomNumber)) {
                     roomElement.innerHTML = `<h4>Chambre "${roomNumber}"</h4>`;
                 } else {
@@ -165,6 +181,9 @@ function renderSections(sections) {
                     index++;
                 }
 
+				if (nbRooms < 3) {
+					roomElement.style.width = "50%";
+				}
                 roomElement.appendChild(bedsElement);
                 carousel.appendChild(roomElement);
             }
@@ -194,50 +213,5 @@ function renderSections(sections) {
                 items: 2
             },
         }
-    });
-    // Add mousewheel functionality
-    // document.querySelectorAll('.owl-carousel').forEach(carousel => {
-    //     let wheelTimeout;
-    //     let length = 0;
-    //     const maxLen = 100;
-
-    //     carousel.addEventListener('wheel', function(e) {
-    //         const owlCarousel = $(this).data('owl.carousel');
-    //         const isAtBeginning = owlCarousel.current() === 0;
-    //         const isAtEnd = owlCarousel.current() === owlCarousel.maximum();
-
-    //         // If scrolling right at the end or left at the beginning, allow default page scroll
-    //         if ((e.deltaY > 0 && isAtEnd) || (e.deltaY < 0 && isAtBeginning)) {
-    //             return; // Allow default page scrolling
-    //         }
-
-    //         e.preventDefault();
-
-    //         clearTimeout(wheelTimeout);
-
-    //         wheelTimeout = setTimeout(() => {
-    //             if (e.deltaY > 0 && length > maxLen) {
-    //                 owlCarousel.next();
-    //                 length = 0;
-    //             } else if (length < -maxLen) {
-    //                 owlCarousel.prev();
-    //                 length = 0;
-    //             } else {
-    //                 length += e.deltaY;
-    //             }
-    //         }, 0); // Adjust this value to control the scrolling speed
-    //     }, { passive: false });
-    // });
-}
-
-function owlize(elt) {
-    // Add touch swipe functionality
-    elt.on('mousewheel', '.owl-stage', function (e) {
-        if (e.deltaY>0) {
-            owl.trigger('next.owl');
-        } else {
-            owl.trigger('prev.owl');
-        }
-        e.preventDefault();
     });
 }
